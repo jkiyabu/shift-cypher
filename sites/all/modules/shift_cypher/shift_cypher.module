@@ -47,9 +47,30 @@ function shift_cypher_form() {
 }
 
 function shift_cypher_form_submit($form, &$form_state) {
+    $direction = strtolower($form_state['values']['shift_direction']);
+    $shift_value = $form_state['values']['shift_value'];
+    $phrase = strtolower($form_state['values']['phrase']);
+    $phrase_array = str_split($phrase);
+    $encrypted_array = array();
+
+    foreach ($phrase_array as $letter) {
+        $ascii_letter = ord($letter);
+        if($ascii_letter >= 97 && $ascii_letter <= 122) {
+            if($ascii_letter - $shift_value >= 97) {
+                $encrypted_letter = chr($ascii_letter - $shift_value);
+            } else {
+                $encrypted_letter = chr($ascii_letter + 26 - $shift_value);
+            }
+        }
+
+        array_push($encrypted_array, $encrypted_letter);
+    }
+
+    $_SESSION['encryption'] = implode($encrypted_array);
     $form_state['redirect'] = 'encryption_success';
 }
 
 function encryption() {
-    return 'your encryption will go here';
+    $output = $_SESSION['encryption'];
+    return 'your encryption: ' . '<p>' . $output . '<p>';
 }

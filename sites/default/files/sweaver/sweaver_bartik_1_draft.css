@@ -1,0 +1,15 @@
+a span {
+  font-family: 'Comic Sans MS',Cursive;
+  line-height: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #050505;
+  font-size: 55px;
+}
+
+#name-and-slogan #site-slogan {
+  font-size: 22px;
+  color: #121112;
+  text-decoration: underline;
+}
+

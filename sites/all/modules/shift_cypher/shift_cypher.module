@@ -11,3 +11,30 @@ function shift_cypher_menu() {
 
     return $items;
 }
+
+function shift_cypher_form() {
+    $form['shift_direction'] = array(
+        '#title' => 'Shift direction',
+        '#type' => 'textfield',
+        '#description' => t('Please enter a shift direction (right/left)'),
+    );
+
+    $form['shift_value'] = array(
+        '#title' => 'Shift value',
+        '#type' => 'textfield',
+        '#description' => t('Value to shift by'),
+    );
+
+    $form['phrase'] = array(
+        '#title' => 'phrase',
+        '#type' => 'textfield',
+        '#description' => 'Enter a phrase to encrypt',
+    );
+
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => 'Encrypt',
+    );
+
+    return $form;
+}

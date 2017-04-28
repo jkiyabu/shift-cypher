@@ -24,18 +24,22 @@ function shift_cypher_form() {
         '#title' => 'Shift direction',
         '#type' => 'textfield',
         '#description' => t('Please enter a shift direction (right/left)'),
+        '#required' => TRUE,
     );
 
     $form['shift_value'] = array(
         '#title' => 'Shift value',
         '#type' => 'textfield',
         '#description' => t('Value to shift by'),
+        '#element_validate' => array('element_validate_integer_positive'),
+        '#required' => TRUE,
     );
 
     $form['phrase'] = array(
         '#title' => 'phrase',
         '#type' => 'textfield',
         '#description' => 'Enter a phrase to encrypt',
+        '#required' => TRUE,
     );
 
     $form['submit'] = array(

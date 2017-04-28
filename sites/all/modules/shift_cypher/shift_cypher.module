@@ -9,6 +9,13 @@ function shift_cypher_menu() {
         'type' => MENU_NORMAL_ITEM,
     );
 
+    $items['encryption_success'] = array(
+        'title' => 'Encryption',
+        'page callback' => 'encryption',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+
     return $items;
 }
 
@@ -37,4 +44,12 @@ function shift_cypher_form() {
     );
 
     return $form;
+}
+
+function shift_cypher_form_submit($form, &$form_state) {
+    $form_state['redirect'] = 'encryption_success';
+}
+
+function encryption() {
+    return 'your encryption will go here';
 }

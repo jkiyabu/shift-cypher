@@ -39,7 +39,8 @@ function shift_cypher_form() {
     $form['phrase'] = array(
         '#title' => 'phrase',
         '#type' => 'textfield',
-        '#description' => 'Enter a phrase to encrypt',
+        '#description' => 'Enter a phrase to encrypt (no special characters except spaces and punctuation)',
+        '#element_validate' => array('element_validate_punctuation'),
         '#required' => TRUE,
     );
 
@@ -54,6 +55,12 @@ function shift_cypher_form() {
 function element_validate_left_right($element) {
     if ((strtolower($element['#value']) != 'left') && (strtolower($element['#value']) != 'right')) {
         form_error($element, t('Shift direction must be left or right'));
+    }
+}
+
+function element_validate_punctuation($element) {
+    if (!preg_match('/^[a-zA-Z,.!? ]*$/', $element['#value'])){
+        form_error($element, t('The phrase can only contain letters, spaces, and punctuation.'));
     }
 }
 

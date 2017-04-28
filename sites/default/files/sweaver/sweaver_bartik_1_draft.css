@@ -11,5 +11,30 @@ a span {
   font-size: 22px;
   color: #121112;
   text-decoration: underline;
+  font-family: 'Comic Sans MS',Cursive;
+}
+
+li a {
+  font-family: 'Comic Sans MS',Cursive;
+}
+
+.section h1 {
+  font-family: 'Comic Sans MS',Cursive;
+}
+
+.form-item label {
+  font-family: 'Comic Sans MS',Cursive;
+}
+
+.form-item .description {
+  font-family: 'Comic Sans MS',Cursive;
+}
+
+div .form-item {
+  font-family: 'Comic Sans MS',Cursive;
+}
+
+div .form-submit {
+  font-family: 'Comic Sans MS',Cursive;
 }
 

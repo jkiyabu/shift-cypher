@@ -1,9 +1,9 @@
 
-#Shift Cypher
+# Shift Cypher
 -------------
 A site made with Drupal where a user can encrypt a message by shifting each letter in that message a desired direction and amount.
 
-##Installation
+## Installation
 --------------
 * Clone repository
 * Set home directory as document root in MAMP web server
@@ -12,7 +12,7 @@ A site made with Drupal where a user can encrypt a message by shifting each lett
 * Browse to localhost:8888
 * Log in as username "cypher" and password "cypher"
 
-##Planning
+## Planning
 ----------
 * Create link to form in menu
 * Create form with 3 inputs - shift direction, shift amount, phrase
@@ -20,7 +20,7 @@ A site made with Drupal where a user can encrypt a message by shifting each lett
 * Add phrase encryption
 * Add form validation
 
-##License
+## License
 ---------
 MIT license
 Copyright(c) 2017 Jayeson Kiyabu All Rights Reserved

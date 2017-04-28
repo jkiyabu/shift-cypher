@@ -1,0 +1,5 @@
+name = Shift Cypher
+description = encrypts a phrase by shifting letters either right or left
+package = My First Modules
+core = 7.x
+files[] = shift_cypher.module

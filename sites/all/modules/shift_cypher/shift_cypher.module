@@ -69,7 +69,8 @@ function shift_cypher_form_submit($form, &$form_state) {
                     $encrypted_letter = chr($ascii_letter - 26 + $shift_value);
                 }
             }
-
+        } else {
+            $encrypted_letter = $letter;
         }
 
         array_push($encrypted_array, $encrypted_letter);

@@ -66,7 +66,7 @@ function element_validate_punctuation($element) {
 
 function shift_cypher_form_submit($form, &$form_state) {
     $direction = strtolower($form_state['values']['shift_direction']);
-    $shift_value = $form_state['values']['shift_value'];
+    $shift_value = $form_state['values']['shift_value'] % 26;
     $phrase = strtolower($form_state['values']['phrase']);
     $phrase_array = str_split($phrase);
     $encrypted_array = array();
